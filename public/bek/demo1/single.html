@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--====== Meta-data ======-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--====== Title ======-->
+  <title>Bek - Single News</title>
+
+  <!--====== Favicon Icons css ======-->
+  <link rel="shortcut icon" href="../assets/img/icons/fav.png" type="image/x-icon">
+  <!--====== FontAwesome Icons css ======-->
+  <link rel="stylesheet" href="../assets/css/plugins/fontawesome.css">
+  <!--====== Bootstrap css ======-->
+  <link rel="stylesheet" href="../assets/css/plugins/bootstrap.min.css">
+  <!--====== Nice Select Css ======-->
+  <link rel="stylesheet" href="../assets/css/plugins/nice-select.css">
+  <!--====== Owl-caoursel css ======-->
+  <link rel="stylesheet" href="../assets/css/plugins/owl.carousel.min.css">
+  <!--====== Owl-caoursel css ======-->
+  <link rel="stylesheet" href="../assets/css/plugins/modal-video.min.css">
+  <!--====== Aos Animations css ======-->
+  <link rel="stylesheet" href="../assets/css/plugins/aos.css">
+  <!--====== Master css ======-->
+  <link rel="stylesheet" href="../assets/css/master.css">
+  <!--====== Styles css ======-->
+  <link rel="stylesheet" href="../styles.css">
+
+  <!--====== Jquery js ======-->
+  <script src="../assets/js/plugins/jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+
+
+  <!--====== Preloader Start ======-->
+  <div class="preloader">
+    <div class="gooey">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!--====== Preloader End ======-->
+
+  <!--====== Cursor Start ======-->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+  </div>
+  <!--====== Cursor End ======-->
+  <!--====== Header Start ======-->
+  <header class="absolute-header">
+    <div class="header-area" id="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6 col-lg-2">
+            <div class="logo">
+              <a href="index.html"><img src="../assets/img/logo/logo1.png" alt=""></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-10">
+
+            <div class="mobile-menu d-lg-none">
+              <div class="mobile-menu-wrap">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+              </div>
+
+            </div>
+            <div class="menu-elements">
+
+              <div class="main-menu">
+                <div class="row align-items-center d-lg-none mb-4">
+                  <div class="col-6">
+                    <div class="logo">
+                      <a href="index.html"><img src="../assets/img/logo/logo1.png" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-close-btn d-lg-none ">
+                  <i class="fal fa-times"></i>
+                </div>
+
+                <ul class="menu-list">
+                  <li class="dropdown"><a href="#">Demos</a>
+                    <ul class="dropdown-parrent">
+                      <li><a href="index.html">Sass Demo 1 </a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/demo2/index.html">Sass Demo 2</a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/demo4/index.html">Sass Demo 3 </a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/demo3/index.html">Startup 1 </a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/demo5/index.html">App Demo 1 </a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/demo6/index.html">App Demo 2 </a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/demo7/index.html">App Demo 3 </a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/demo8/index.html">Product Demo 1 </a></li>
+                      <li><a href="https://html.fleexstudio.com/bek/rtl/index.html">RTL Version </a></li>
+                    </ul>
+                    <span class="dropdown-plus d-lg-none"><i class="fal fa-plus"></i></span>
+                  </li>
+                  <li><a href="feature.html">Features</a></li>
+
+                  <li class="mega-menu"><a href="#">Elements</a>
+                    <div class="mega-menu-list">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <div class="single-mega border-right">
+                            <h3>Pages</h3>
+                            <ul>
+                              <li><a href="blog.html">News Feeds</a></li>
+                              <li><a href="contact.html">Contacts</a></li>
+                              <li><a href="login.html">Sign In</a></li>
+                              <li><a href="signup.html">Sign Up</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="single-mega border-right">
+                            <h3>Blocks</h3>
+                            <ul>
+                              <li><a href="feature.html">Features</a></li>
+                              <li><a href="testimonials.html">Testimonials</a></li>
+                              <li><a href="price.html">Pricing Plans</a></li>
+                              <li><a href="blog.html">News Feeds</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="single-mega border-right">
+                            <h3>News Variations</h3>
+                            <ul>
+                              <li><a href="blog-left.html">News Left</a></li>
+                              <li><a href="blog-2-columns.html">2 Columns</a></li>
+                              <li><a href="blog-3-columns.html">3 Columns</a></li>
+                              <li><a href="blog-no-sidebar.html">No Sidebar</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="single-mega">
+                            <h3>Other Pages</h3>
+                            <ul>
+                              <li><a href="contact.html">Contacts</a></li>
+                              <li><a href="feature.html">Features</a></li>
+                              <li><a href="price.html">Pricing Plans</a></li>
+                              <li><a href="single.html">Single News</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="dropdown-plus d-lg-none"><i class="fal fa-plus"></i></span>
+                  </li>
+                  <li class="dropdown"><a href="#">Pages</a>
+                    <ul class="dropdown-parrent">
+                      <li><a href="blog.html">News Feeds</a></li>
+                      <li><a href="blog-left.html">News Left</a></li>
+                      <li><a href="blog-no-sidebar.html">No Sidebar</a></li>
+                      <li><a href="blog-2-columns.html">2 Columns</a></li>
+                      <li><a href="blog-3-columns.html">3 Columns</a></li>
+                      <li class="has-parrent-dropdown"><a href="products.html">Products <i class="fal fa-plus"></i></a>
+                        <ul class="has-dropdown-childern">
+                          <li><a href="products.html">Products</a></li>
+                          <li><a href="single-product.html">Single Product</a></li>
+                        </ul>
+                      </li>
+                      <li class="has-parrent-dropdown"><a href="#">Single News <i class="fal fa-plus"></i></a>
+                        <ul class="has-dropdown-childern">
+                          <li><a href="single.html">Single News</a></li>
+                          <li><a href="single-left.html">Left News</a></li>
+                          <li><a href="single-no-sidebar.html">No Sidebar </a></li>
+                        </ul>
+                      </li>
+                      <li><a href="404.html">404 Error</a></li>
+                    </ul>
+                    <span class="dropdown-plus d-lg-none"><i class="fal fa-plus"></i></span>
+                  </li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+              </div>
+              <div class="action-btn">
+                <a href="signup.html" class="cbtn btn-one effect1">Started Now</a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--====== Header End ======-->
+
+
+  <!--====== Welcome Start ======-->
+  <div class="inner-welcome pt85">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="title">
+            <h1>Single News</h1>
+          </div>
+          <div class="bread-crumb text-center">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Single</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inner-1-bg">
+      <img src="https://html.fleexstudio.com/bek/assets/img/bg/feature2bg2-2.svg" alt="">
+    </div>
+    <div class="inner-2-bg">
+      <img src="https://html.fleexstudio.com/bek/assets/img/bg/feature2bg2-2.svg" alt="">
+    </div>
+  </div>
+  <div class="border-bottom-gray"></div>
+  <!--====== Welcome End ======-->
+
+  <!--====== Blog  Start ======-->
+  <div class="blog-area section-padding inner-bg ">
+    <div class="container">
+      <div class="row mb30">
+        <div class="col-lg-8">
+          <div class="blogs mr-lg-40">
+
+            <div class="single-blog">
+              <div class="blog-img blog-img-big">
+                <img src="../assets/img/blog/blog2.jpg" alt="">
+
+                <div class="blog-date">
+                  <h2>24 <span>jan</span></h2>
+                </div>
+
+              </div>
+              <div class="blog-content">
+                <a href="single.html">A Guide to Using Sauna to Increase Your Health
+                  and Longevity</a>
+                <ul>
+                  <li><a href="#">Feb 28</a></li>
+                  <li class="read-circle"><a href="#">5 min to read</a></li>
+                </ul>
+                <div class="author ">
+                  <div class="author-img">
+                    <img src="../assets/img/testimonials/author1.png" alt="">
+                  </div>
+                  <a href="#">Larry Hudson</a>
+
+                </div>
+                <div class="blog-text my-5">
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                    to using 'Content here, content here', making it look like readable English.</p>
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+                    sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
+                    Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                  <p class="block-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                    letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                  <div class="blog-video-area img-hover">
+                    <img src="../assets/img/blog/blog1.jpg" alt="">
+                    <a href="#" class="video-btn-blog">
+                      <i class="fas fa-play"></i>
+                    </a>
+                  </div>
+
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+                    sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
+                    Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                  <div class="img-block">
+                    <img src="../assets/img/blog/1.jpg" alt="">
+                    <img src="../assets/img/blog/2.jpg" alt="">
+                  </div>
+
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from
+                    sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
+                    Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+                    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+
+                </div>
+
+
+              </div>
+            </div>
+            <div class="single-blog-tags">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="tag-list">
+                    <ul>
+                      <li class="tag-head">Tags: </li>
+                      <li><a href="#">App</a></li>
+                      <li><a href="#">Landing</a></li>
+                      <li><a href="#">Agency</a></li>
+                      <li><a href="#">Sass</a></li>
+                      <li><a href="#">Product</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 text-right">
+                  <div class="socials">
+                    <ul>
+                      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popular-blogs">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="single-blog">
+                    <div class="blog-img blog-img-small">
+                      <img src="../assets/img/blog/blog2.jpg" alt="">
+
+                    </div>
+                    <div class="blog-content">
+                      <a href="single.html">A Guide to Using Sauna to Increase Your Health
+                        and Longevity</a>
+                      <ul>
+                        <li><a href="#">Feb 28</a></li>
+                        <li class="read-circle"><a href="#">5 min to read</a></li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="single-blog">
+                    <div class="blog-img blog-img-small">
+                      <img src="../assets/img/blog/blog2.jpg" alt="">
+
+                    </div>
+                    <div class="blog-content">
+                      <a href="single.html">A Guide to Using Sauna to Increase Your Health
+                        and Longevity</a>
+                      <ul>
+                        <li><a href="#">Feb 28</a></li>
+                        <li class="read-circle"><a href="#">5 min to read</a></li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comments-area">
+              <h3>Comments (25)</h3>
+
+              <div class="single-comment">
+                <div class="comment-img">
+                  <a href="#"><img src="../assets/img/blog/comment1.jpg" alt=""></a>
+                </div>
+                <div class="comment">
+                  <div class="comment-author">
+                    <a href="#">Jenifer Lofez</a>
+                    <p>35 Days ago</p>
+                    <a href="#" class="coment-replay"><i class="fas fa-reply"></i></a>
+                  </div>
+                  <p>It doesn’t matter if you want to use a solid color, image pattern oren one your across the entire background of your site, X lets you upload or choose imagen instantly shows you the changes in the live preview window.</p>
+                </div>
+
+              </div>
+              <div class="single-comment children-comment">
+                <div class="comment-img">
+                  <a href="#"><img src="../assets/img/blog/comment1.jpg" alt=""></a>
+                </div>
+                <div class="comment">
+                  <div class="comment-author">
+                    <a href="#">Jenifer Lofez</a>
+                    <p>35 Days ago</p>
+                    <a href="#" class="coment-replay"><i class="fas fa-reply"></i></a>
+                  </div>
+                  <p>It doesn’t matter if you want to use a solid color, image pattern oren one your across the entire background of your site, X lets you upload or choose imagen instantly shows you the changes in the live preview window.</p>
+                </div>
+              </div>
+              <div class="single-comment">
+                <div class="comment-img">
+                  <a href="#"><img src="../assets/img/blog/comment1.jpg" alt=""></a>
+                </div>
+                <div class="comment">
+                  <div class="comment-author">
+                    <a href="#">Jenifer Lofez</a>
+                    <p>35 Days ago</p>
+                    <a href="#" class="coment-replay"><i class="fas fa-reply"></i></a>
+                  </div>
+                  <p>It doesn’t matter if you want to use a solid color, image pattern oren one your across the entire background of your site, X lets you upload or choose imagen instantly shows you the changes in the live preview window.</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="comment-form">
+              <h3>Leave a comment</h3>
+              <form action="#">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="input-field input-name"><input type="text" placeholder="Full Name"></p>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="input-field input-email"><input type="email" placeholder="Enter Email"></p>
+                  </div>
+                  <div class="col-md-12">
+                    <p class="textarea-filed">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    </p>
+
+                    <button type="submit" class="submit-btn">Submit Now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="blog-sidebar mt-sm-60">
+            <div class="widget widget-search mb60">
+              <h3>Search Anything</h3>
+              <div class="search-from">
+                <form action="#">
+                  <input type="search" placeholder="Search Here">
+                  <button type="submit" class="seach-btn"><i class="far fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="widget post-categories mb60">
+              <h3>Post Catageory</h3>
+              <ul>
+                <li><a href="#">UI/UX Design Task</a></li>
+                <li><a href="#">Degital Marketing</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Search Engine Optimization</a></li>
+              </ul>
+            </div>
+            <div class="widget recent-posts mb60">
+              <h3>Recent Posts</h3>
+              <div class="single-recent">
+                <div class="recent-post-thumbnails">
+                  <img src="../assets/img/blog/recent1.png" alt="">
+                </div>
+                <p>16.02.2021</p>
+                <a href="#">Simply port the sampe file ship with theme.</a>
+              </div>
+              <div class="single-recent">
+                <div class="recent-post-thumbnails">
+                  <img src="../assets/img/blog/recent6.png" alt="">
+                </div>
+                <p>16.01.2022</p>
+                <a href="#">Class aptent taciti sociosqu pharetra.</a>
+              </div>
+              <div class="single-recent">
+                <div class="recent-post-thumbnails">
+                  <img src="../assets/img/blog/recent3.png" alt="">
+                </div>
+                <p>20.02.2020</p>
+                <a href="#">Fusce pharetra arcu ac leo volutpat, at tristique.</a>
+              </div>
+              <div class="single-recent">
+                <div class="recent-post-thumbnails">
+                  <img src="../assets/img/blog/recent4.png" alt="">
+                </div>
+                <p>13.02.2020</p>
+                <a href="#">Morbi euismod diam quis consectetur.</a>
+              </div>
+            </div>
+            <div class="widget tags mb60">
+              <h3>Popular Tags</h3>
+              <ul>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Corporate</a></li>
+                <li><a href="#">Agency</a></li>
+                <li><a href="#">App</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Landing</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Sass</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--====== Blog  End ======-->
+
+
+  <!--====== Subscribe Start ======-->
+  <div class="subscribe-area gray-bg">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="subscribe">
+            <h2>Start 15 days free trial</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="subcribe-form">
+            <input type="email" placeholder="Enter your email..">
+            <button type="submit" class="submit-btn">Started Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--====== Subscribe End ======-->
+
+  <!--====== Footer start ======-->
+  <footer>
+    <div class="footer-white footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <a href="#" class="footer-logo"><img src="../assets/img/logo/logo1.png" alt=""></a>
+            <div class="socials my-4">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            <div class="copywrite mt-5">
+              <p>Bek. All Right Reserved</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="footer-widget mt-4 mt-lg-0">
+              <h3>Others Link</h3>
+              <ul>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Diversity</a></li>
+                <li><a href="#">Carrer</a></li>
+                <li><a href="#">Present</a></li>
+                <li><a href="#">Leadership</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="footer-widget mt-4 mt-lg-0">
+              <h3>Bek. Soluation</h3>
+              <ul>
+                <li><a href="#">Imperdiet</a></li>
+                <li><a href="#">Partueient</a></li>
+                <li><a href="#">Faucibus</a></li>
+                <li><a href="#">Ultricies</a></li>
+                <li><a href="#">Privicy & Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="footer-widget mt-4 mt-lg-0">
+              <h3>Get in Touch</h3>
+              <ul>
+                <li><a href="#">359 Hill Field Avenue Laurel, MD 20707</a></li>
+                <li><a href="#">+88 967 846 937</a></li>
+                <li><a href="#"> bek.249@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--====== Footer end ======-->
+
+
+  <!--====== Bootstrap js ======-->
+  <script src="../assets/js/plugins/bootstrap.min.js"></script>
+  <!--====== Nice select js ======-->
+  <script src="../assets/js/plugins/jquery.nice-select.js"></script>
+  <!--====== Owl carousel js ======-->
+  <script src="../assets/js/plugins/owl.carousel.min.js"></script>
+  <!--====== Aos  js ======-->
+  <script src="../assets/js/plugins/aos.js"></script>
+  <!--====== Proper  js ======-->
+  <script src="../assets/js/plugins/popper.min.js"></script>
+  <!--====== Modal Video  js ======-->
+  <script src="../assets/js/plugins/jquery-modal-video.min.js"></script>
+  <!--====== active js ======-->
+  <script src="../assets/js/active.js"></script>
+  <!--====== main js ======-->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

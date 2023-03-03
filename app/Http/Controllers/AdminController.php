@@ -26,7 +26,7 @@ class AdminController extends Controller
             'tahun'=>$request->tahun,
             'nominal'=>$request->nominal,
         ]);
-        return redirect()->route('spp');
+        return redirect()->route('spp')->with('success', 'Data berhasil ditambah');
     }
     public function showspp($id){
         $data = Spp::find($id);
@@ -41,6 +41,12 @@ class AdminController extends Controller
             'nominal' => $request->nominal,
         ]);
         return redirect()->route('kelas')->with('success', 'Data berhasil di edit');
+    }
+    public function deletespp($id)
+    {
+        $data = Spp::find($id);
+        $data->delete();
+        return redirect('spp')->with('success', 'Berhasil Di Hapus');
     }
 ////////////////////////  FORM KELAS  //////////////////////////
     public function kelas(){

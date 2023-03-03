@@ -505,7 +505,7 @@ ul {
 .soft-bg {
   position: absolute;
   right: -301px;
-  width: 70%;
+  width: 40%;
   z-index: 1;
   height: 850px;
 }

@@ -3,9 +3,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-lg-2">
-            <div class="logo">
-              <a href="index.html"><img src="{{asset('bek/assets/img/logo/logo1.png')}}" alt=""></a>
-            </div>
+            {{-- <div class="logo">
+              <a href="index.html"><img src="{{asset('foto/logo.png')}}" alt=""></a>
+            </div> --}}
           </div>
           <div class="col-6 col-lg-10">
 

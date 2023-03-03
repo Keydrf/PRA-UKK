@@ -2,7 +2,7 @@
 <html lang="en">
 @include('admin.layout.head')
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
     <div class="container-scroller">
         @include('admin.layout.sidebar')
@@ -50,15 +50,16 @@
                                                         {{ $spp->id_spp }}
                                                     </td>
                                                     <td>{{ $spp->tahun }}</td>
+
                                                     <td>
                                                         {{ $spp->nominal }}
                                                     </td>
                                                     <td>
-                                                        <button type="button"
-                                                            class="btn btn-danger btn-rounded btn-fw"> Hapus </button>
-                                                        <button type="button"
+
+                                                        <a href="/editspp/{{$spp->id_spp}}"></a><button type="button"
                                                             class="btn btn-warning btn-rounded btn-fw"> Edit
                                                         </button>
+                                                        <a href="#" class="btn btn-danger btn-rounded btn-fw delete" data-id="{{ $spp->id_spp }}" data-spp="{{ $spp->tahun }}">Hapus</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -82,9 +83,38 @@
         @include('admin.layout.script')
         <!-- End custom js for this page -->
         <script src="//cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </body>
+<script>
+    $('.delete').click(function() {
+        var sppid = $(this).attr('data-id');
+        var spp = $(this).attr('data-spp');
+        swal({
+                title: "Apakah kamu yakin?",
+                text: "Kamu akan menghapus spp tahun " + spp + "",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location = "/deletespp/" + sppid + ""
+                    swal("Data berhasil dihapus", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("Data tidak jadi dihapus");
+                }
+            });
+    });
+</script>
 <script>
     let table = new DataTable('#myTable');
 </script>
-
+<script>
+    @if(Session::get('success'))
+    toastr.success("{{ Session::get('success') }}")
+    @endif
+</script>
 </html>

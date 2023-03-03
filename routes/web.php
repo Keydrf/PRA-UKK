@@ -37,6 +37,9 @@ Route::post('/addsiswa', [AdminController::class, 'addsiswa'])->name('addsiswa')
 Route::get('/spp', [AdminController::class, 'spp'])->name('spp');
 Route::get('/formspp', [AdminController::class, 'formspp'])->name('formspp');
 Route::post('/addspp', [AdminController::class, 'addspp'])->name('addspp');
+Route::get('/showspp/{id}', [AdminController::class, 'showspp'])->name('showspp');
+Route::post('/updatespp/{id}', [AdminController::class, 'updatespp'])->name('updatespp');
+Route::get('/deletespp/{id}', [AdminController::class, 'deletespp'])->name('deletespp');
 
 Route::get('/kelas', [AdminController::class, 'kelas'])->name('kelas');
 Route::get('/formkelas', [AdminController::class, 'formkelas'])->name('formkelas');

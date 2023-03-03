@@ -493,7 +493,7 @@ ul {
 
 .inner-welcome {
   position: relative;
-  height: 500px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

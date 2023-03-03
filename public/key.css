@@ -1,0 +1,26 @@
+.inner-welcomee {
+    position: relative;
+    height: 300px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.inner-welcome .inner-1-bgg {
+    height: 200px !important;
+    width: 35%;
+    left: -15%;
+    bottom: -20%;
+    z-index: -1;
+    position: absolute;
+}
+.inner-welcome .inner-2-bgg {
+    height: 200px !important;
+    width: 35%;
+    right: -7%;
+    top: -10%;
+    z-index: -1;
+    position: absolute;
+}

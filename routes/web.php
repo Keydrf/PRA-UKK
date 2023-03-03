@@ -16,11 +16,11 @@ use App\Http\Controllers\LandingController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/index', [LandingController::class, 'index'])->name('index');
+Route::get('/', [LandingController::class, 'index'])->name('index');
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/register', [LoginController::class, 'register'])->name('register');
@@ -46,3 +46,8 @@ Route::get('/formkelas', [AdminController::class, 'formkelas'])->name('formkelas
 Route::post('/addkelas', [AdminController::class, 'addkelas'])->name('addkelas');
 Route::get('/showkelas/{id}', [AdminController::class, 'showkelas'])->name('showkelas');
 Route::post('/updatekelas/{id}', [AdminController::class, 'updatekelas'])->name('updatekelas');
+
+
+Route::group(['middleware' => ['auth', 'checkkrole:petugas']], function () {
+    Route::get('/petugas', [PetugasController::class, 'petugas'])->name('petugas');
+});

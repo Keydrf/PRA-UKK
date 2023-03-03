@@ -15,10 +15,13 @@ class LoginController extends Controller
     }
 
     public function loginpost(Request $request){
-        if (Auth::attempt($request->only('email', 'password'))) {
+        if (Auth::user()->level == 'admin') {
             return redirect('/dashboard');
-        } else{
-            return redirect()->back()->with('password', 'password salah');
+        
+        } elseif (Auth::user()->level == "penjual") {
+            return redirect("/tes");
+        } else {
+            return redirect("/toko");
         }
 
         return \redirect('login');

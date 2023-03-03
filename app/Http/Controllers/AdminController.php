@@ -15,7 +15,7 @@ class AdminController extends Controller
 
     public function spp(){
         $data = Spp::all();
-        return view('admin.spp.spp', compact('data'));
+        return view('admin.spp1.spp', compact('data'));
     }
     public function formspp(){
         return view('admin.spp.tambahspp');

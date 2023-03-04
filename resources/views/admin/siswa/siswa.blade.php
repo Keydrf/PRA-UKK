@@ -58,10 +58,10 @@
                                                     <td>
                                                         {{ $siswa->nama }}
                                                     </td>
-                                                    <td>{{ $siswa->kelas->kompetensi_keahlian }}</td>
+                                                    <td>{{ $siswa->kelas->nama_kelas }}</td>
                                                     <td>{{ $siswa->alamat }}</td>
                                                     <td>{{ $siswa->no_telp }}</td>
-                                                    <td>{{ $siswa->spp->id_spp }}</td>
+                                                    <td>{{ $siswa->spp->nominal }}</td>
                                                     <td>
                                                         <button type="button"
                                                             class="btn btn-danger btn-rounded btn-fw"> Hapus </button>

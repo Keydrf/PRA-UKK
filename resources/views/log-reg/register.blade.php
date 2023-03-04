@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('layout.head')
+@include('landing.layout.head')
 
 <body>
 
@@ -26,7 +26,7 @@
   <!--====== Cursor End ======-->
 
   <!--====== Header Start ======-->
-  @include('layout.header')
+  @include('landing.layout.header')
   <!--====== Header End ======-->
 
 
@@ -124,13 +124,13 @@
 
 
   <!--====== Footer start ======-->
-  @include('layout.footer')
+  @include('landing.layout.footer')
   <!--====== Footer end ======-->
 
 
 
   <!--====== Bootstrap js ======-->
-  @include('layout.script')
+  @include('landing.layout.script')
 
 </body>
 

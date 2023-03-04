@@ -27,6 +27,10 @@ Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::post('/registerpost', [LoginController::class, 'registerpost'])->name('registerpost');
 Route::post('/loginpost', [LoginController::class, 'loginpost'])->name('loginpost');
 
+// Route::group(['middleware' => ['auth', 'CheckRole:admin']], function () {
+
+
+// });
 
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
@@ -45,9 +49,9 @@ Route::get('/kelas', [AdminController::class, 'kelas'])->name('kelas');
 Route::get('/formkelas', [AdminController::class, 'formkelas'])->name('formkelas');
 Route::post('/addkelas', [AdminController::class, 'addkelas'])->name('addkelas');
 Route::get('/showkelas/{id}', [AdminController::class, 'showkelas'])->name('showkelas');
+
+Route::get('/petugas', [PetugasController::class, 'petugas'])->name('petugas');
 Route::post('/updatekelas/{id}', [AdminController::class, 'updatekelas'])->name('updatekelas');
+// Route::group(['middleware' => ['auth', 'CheckRole:petugas']], function () {
 
-
-Route::group(['middleware' => ['auth', 'checkkrole:petugas']], function () {
-    Route::get('/petugas', [PetugasController::class, 'petugas'])->name('petugas');
-});
+// });

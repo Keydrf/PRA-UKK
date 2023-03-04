@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('layout.head')
+@include('landing.layout.head')
 
 <body>
 
@@ -25,7 +25,7 @@
   <!--====== Cursor End ======-->
 
   <!--====== Header Start ======-->
-  @include('layout.header')
+  @include('landing.layout.header')
   <!--====== Header End ======-->
 
   <!--====== Welcome Start ======-->
@@ -92,7 +92,7 @@
 
 
 
-@include('layout.script')
+@include('landing.layout.script')
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--====== Title ======-->
-    <title>Bek - sass and app landing html5 template</title>
+    <title>Pembayaran SPP</title>
 
     <!--====== Favicon Icons css ======-->
     <link rel="shortcut icon" href="{{asset('bek/assets/img/icons/fav.png')}}" type="image/x-icon">

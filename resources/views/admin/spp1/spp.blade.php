@@ -65,7 +65,7 @@
                 <div class="col-lg-12 m-auto">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Data SPP</h4>
+                            {{-- <h4 class="card-title">Data SPP</h4> --}}
                             <a href="/formspp"><button type="button" class="btn btn-primary btn-rounded btn-fw">
                                     Tambah + </button></a>
                             </p>
@@ -89,13 +89,13 @@
                                                 <td>{{ $spp->tahun }}</td>
 
                                                 <td>
-                                                    {{ $spp->nominal }}
+                                                    @currency($spp->nominal)
                                                 </td>
                                                 <td>
 
-                                                    <a href="/editspp/{{ $spp->id_spp }}"></a><button type="button"
+                                                    <a href="/showspp/{{ $spp->id_spp }}"><button type="button"
                                                         class="btn btn-warning btn-rounded btn-fw"> Edit
-                                                    </button>
+                                                    </button></a>
                                                     <a href="#" class="btn btn-danger btn-rounded btn-fw delete"
                                                         data-id="{{ $spp->id_spp }}"
                                                         data-spp="{{ $spp->tahun }}">Hapus</a>
@@ -234,4 +234,5 @@
     toastr.success("{{ Session::get('success') }}")
     @endif
 </script>
+
 </html>

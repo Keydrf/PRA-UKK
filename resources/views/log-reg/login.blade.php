@@ -79,13 +79,13 @@
                 <div class="row">
 
                   <div class="col-12">
-                    <label for="email">Email Or Username *</label>
-                    <p class="input-field input-email"><input type="email" id="email" name="email" placeholder="Email Or Username"></p>
+                    <label for="email">Email *</label>
+                    <p class="input-field input-email"><input type="email" id="email" name="email" placeholder="Email" autofocus required></p>
                   </div>
 
                   <div class="col-12">
                     <label for="password">Password *</label>
-                    <p class="input-field input-password"><input type="password" id="password" name="password" placeholder="Password"></p>
+                    <p class="input-field input-password"><input type="password" id="password" name="password" placeholder="Password" required></p>
                   </div>
 
                   {{-- <div class="col-6 mb-3">

@@ -46,7 +46,7 @@
                     {{-- <span class="dropdown-plus d-lg-none"><i class="fal fa-plus"></i></span> --}}
                   </li>
                  
-                </ul>
+                </ul>             
 
               </div>
               <div class="action-btn">

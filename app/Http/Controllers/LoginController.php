@@ -17,16 +17,19 @@ class LoginController extends Controller
 
     public function loginpost(Request $request, ){
         if (Auth::attempt($request->only('email', 'password'))) {
-        if (auth()->user()->role == 'admin') {
-            return redirect('/dashboard');
-        } elseif (Auth::user()->role == "petugas") {
-            return redirect('/petugas');
-        } elseif (Auth::user()->role == "siswa") {
-            return redirect('/siswa');
+            return redirect('/spp');
         }
-         else {
-            return redirect("/toko");
-        }}
+        // if (Auth::attempt($request->only('email', 'password'))) {
+        // // if (auth()->user()->role == 'admin') {
+        // //     return redirect('/dashboard');
+        // // } elseif (Auth::user()->role == "petugas") {
+        // //     return redirect('/petugas');
+        // // } elseif (Auth::user()->role == "siswa") {
+        // //     return redirect('/siswa');
+        // // }
+        //  else {
+        //     return redirect("/toko");
+        // }}
 
         return \redirect('login');
     }

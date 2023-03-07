@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::directive('convert', function ($money) {
-            return "<?php echo number_format($money, 2); ?>";
+        Blade::directive('currency', function ($expression) {
+            return "Rp. <?php echo number_format($expression,0,',','.'); ?>";
         });
     }
 }

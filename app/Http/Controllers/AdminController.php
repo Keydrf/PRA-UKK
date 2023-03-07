@@ -18,7 +18,7 @@ class AdminController extends Controller
         return view('admin.spp1.spp', compact('data'));
     }
     public function formspp(){
-        return view('admin.spp.tambahspp');
+        return view('admin.spp1.tambah');
     }
     public function addspp(Request $request){
         $data = Spp::create([
@@ -31,7 +31,7 @@ class AdminController extends Controller
     public function showspp($id){
         $data = Spp::find($id);
         $data = Spp::findOrFail($id);
-        return view('admin.spp.editspp');
+        return view('admin.spp1.edit', compact('data'));
     }
     public function updatespp(Request $request, $id)
     {
@@ -108,5 +108,11 @@ class AdminController extends Controller
             'id_spp'=>$request->id_spp,
         ]);
         return redirect()->route('siswa');
+    }
+    public function filter(Request $request){
+        $year = $request->get('tahun');
+
+        $spp = Spp::whereYear('created_at', '=', $year)->get();
+        return view('admin.spp.spp', ['spp'=>$spp]);
     }
 }

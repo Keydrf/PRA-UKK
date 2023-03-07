@@ -26,7 +26,7 @@ Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::post('/registerpost', [LoginController::class, 'registerpost'])->name('registerpost');
 Route::post('/loginpost', [LoginController::class, 'loginpost'])->name('loginpost');
-
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 // Route::group(['middleware' => ['auth', 'CheckRole:admin']], function () {
 
 

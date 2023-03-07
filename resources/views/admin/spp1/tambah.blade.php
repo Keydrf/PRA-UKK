@@ -1,15 +1,9 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 @include('admin.layout-bek.head')
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
-    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
 
 
@@ -41,7 +35,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="title">
-                        <h1>Data Kelas</h1>
+                        <h1>Data SPP</h1>
                     </div>
                     {{-- <div class="bread-crumb text-center">
                         <nav aria-label="breadcrumb">
@@ -69,11 +63,11 @@
         <div class="container">
             <div class="row mb30">
                 <div class="col-lg-12 m-auto">
-                   <div class="card">
+                    <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Edit Kelas</h4>
+                                <h4 class="card-title">Tambah SPP</h4>
 
-                                <form action="/updatekelas/{{ $data->id_kelas }}" method="POST" class="forms-sample">
+                                <form action="/addspp" method="POST" class="forms-sample">
                                     @csrf
                                     {{-- <div class="form-group">
                                         <label for="exampleInputName1">ID SPP</label>
@@ -81,24 +75,33 @@
                                             placeholder="ID SPP" />
                                     </div> --}}
                                     <div class="form-group">
-                                        <label for="exampleInputName1">Nama Kelas</label>
-                                        <input type="text" class="form-control" id="exampleInputName1"
-                                            name="nama_kelas" value="{{ $data->nama_kelas }}"
-                                            placeholder="Nama Kelas" />
+                                        <label for="exampleInputName1">Tahun</label>
+                                        <select class="form-control" name="tahun" id="tahun">
+                                            <?php 
+                                            $year = date('Y');
+                                            $min = $year - 5;
+                                            $max = $year + 5;
+                                            $now = $year;
+                                            for ($i = $year; $i >= $min; $i--){
+                                                echo '<option value=' . $i . '>' . $i . '</option>';}
+                                            ?>
+                                        </select>
+                                        
+                                        {{-- <input type="text" class="form-control" id="exampleInputName1" name="tahun"
+                                            placeholder="Tahun" /> --}}
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputName1">Kompetensi Keahlian</label>
-                                        <input type="text" class="form-control" id="exampleInputName1"
-                                            name="kompetensi_keahlian" value="{{ $data->kompetensi_keahlian }}"
-                                            placeholder="Kompetensi Keahlian" />
+                                        <label for="exampleInputName1">Nominal</label>
+                                        <input type="text" class="form-control" id="nominal" name="nominal"
+                                            placeholder="Nominal" />
                                     </div>
-
+                                    <br>
 
                                     <button type="submit" class="btn btn-primary mr-2"> Submit </button>
                                     <button class="btn btn-light">Cancel</button>
                                 </form>
                             </div>
-                        </div> 
+                        </div>
                 </div>
             </div>
 
@@ -194,20 +197,20 @@
     @include('admin.layout-bek.script')
 </body>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function(){
         e.preventDefault();
         $.ajax({
             url: urlStr,
             type: GET,
-            data: {
-                tahun: $("#tahun").val()
+            data : {
+                tahun : $("#tahun").val()
             },
             success: function(datas) {
                 console.log(datas);
                 chart.data.w.config.series[0].data = datas.spp
                 chart.update()
             },
-            error: function(error) {
+            error: function(error){
                 console.log('error $(error)');
             }
         })
@@ -237,5 +240,4 @@ function formatRupiah(angka, prefix)
     return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
 }
 </script> --}}
-
 </html>

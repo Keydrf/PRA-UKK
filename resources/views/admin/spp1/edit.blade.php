@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="title">
-                        <h1>Data Kelas</h1>
+                        <h1>Data SPP</h1>
                     </div>
                     {{-- <div class="bread-crumb text-center">
                         <nav aria-label="breadcrumb">
@@ -69,11 +66,10 @@
         <div class="container">
             <div class="row mb30">
                 <div class="col-lg-12 m-auto">
-                   <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Edit Kelas</h4>
+                    <div class="card-body">
+                                <h4 class="card-title">Edit SPP</h4>
 
-                                <form action="/updatekelas/{{ $data->id_kelas }}" method="POST" class="forms-sample">
+                                <form action="/updatespp/{{$data->id_kelas}}" method="POST" class="forms-sample">
                                     @csrf
                                     {{-- <div class="form-group">
                                         <label for="exampleInputName1">ID SPP</label>
@@ -81,16 +77,23 @@
                                             placeholder="ID SPP" />
                                     </div> --}}
                                     <div class="form-group">
-                                        <label for="exampleInputName1">Nama Kelas</label>
-                                        <input type="text" class="form-control" id="exampleInputName1"
-                                            name="nama_kelas" value="{{ $data->nama_kelas }}"
-                                            placeholder="Nama Kelas" />
+                                        <label for="exampleInputName1">Tahun</label>
+                                         <select class="form-control" name="tahun" id="tahun">
+                                            <option selected>{{ $data->tahun }}</option>
+                                            <?php 
+                                            $year = date('Y');
+                                            $min = $year - 5;
+                                            $max = $year + 5;
+                                            $now = $year;
+                                            for ($i = $year; $i >= $min; $i--){
+                                                echo '<option value=' . $i . '>' . $i . '</option>';}
+                                            ?>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputName1">Kompetensi Keahlian</label>
-                                        <input type="text" class="form-control" id="exampleInputName1"
-                                            name="kompetensi_keahlian" value="{{ $data->kompetensi_keahlian }}"
-                                            placeholder="Kompetensi Keahlian" />
+                                        <label for="exampleInputName1">Nominal</label>
+                                        <input type="text" class="form-control" id="exampleInputName1" name="nominal" value="{{$data->nominal}}"
+                                            placeholder="Nominal" />
                                     </div>
 
 
@@ -98,7 +101,6 @@
                                     <button class="btn btn-light">Cancel</button>
                                 </form>
                             </div>
-                        </div> 
                 </div>
             </div>
 
